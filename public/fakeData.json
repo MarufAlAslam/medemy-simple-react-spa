@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "img": "https://marufalaslam.github.io/test/html.png",
+        "name": "HTML Course",
+        "details": "HTML is a markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web. Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.",
+        "forAge": "10+",
+        "timeRequired": "1h 30m"
+    },
+    {
+        "id": "2",
+        "img": "https://marufalaslam.github.io/test/css.jpg",
+        "name": "CSS Course",
+        "details": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.",
+        "forAge": "12+",
+        "timeRequired": "2h 00m"
+    },
+    {
+        "id": "3",
+        "img": "https://marufalaslam.github.io/test/js.png",
+        "name": "JavaScript Course",
+        "details": "JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. Alongside HTML and CSS, JavaScript is one of the three core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it, and all major web browsers have a dedicated JavaScript engine to execute it.",
+        "forAge": "14+",
+        "timeRequired": "4h 30m"
+    },
+    {
+        "id": "4",
+        "img": "https://marufalaslam.github.io/test/react.png",
+        "name": "React Course",
+        "details": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with rendering data to the DOM, and so creating React applications usually requires the use of additional libraries for state management and routing. Redux and React Router are respective examples of such libraries.",
+        "forAge": "15+",
+        "timeRequired": "8h 00m"
+    },
+    {
+        "id": "5",
+        "img": "https://marufalaslam.github.io/test/node.png",
+        "name": "NodeJS Course",
+        "details": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Node.js is an event-based, non-blocking, asynchronous I/O runtime that uses Google's V8 JavaScript engine and libuv library.",
+        "forAge": "17+",
+        "timeRequired": "7h 20m"
+    },
+    {
+        "id": "6",
+        "img": "https://marufalaslam.github.io/test/mongo.png",
+        "name": "MongoDB Course",
+        "details": "MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License. MongoDB was originally named Humongous, but was renamed to MongoDB in 2009. MongoDB is written in C++.",
+        "forAge": "19+",
+        "timeRequired": "10h 00m"
+    }
+]

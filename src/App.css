@@ -1,4 +1,22 @@
 /* my code starts from here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
 .course-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -10,7 +28,8 @@
 }
 
 .course-holder {
-  background-color: #F4F6F9;
+  background-color: #8FE3CF;
+  padding: 50px 0;
 }
 
 .container {
@@ -20,4 +39,8 @@
 
 .me-2 {
   margin-right: 5px;
+}
+
+.blue {
+  color: #002B5B;
 }

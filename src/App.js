@@ -8,9 +8,10 @@ function App() {
       <div className='course-container'>
         <div className='course-holder'>
           <div className='container'>
-            <h2>
+            <h2 className='blue bold'>
               <FontAwesomeIcon className='me-2' icon={faBook} />
-              Course Name</h2>
+              MEDEMY | Find Your Desired Course From Here.
+            </h2>
           </div>
         </div>
         <div className='profile-holder'>
