@@ -18,13 +18,17 @@ const MainContainer = () => {
     // const [activeState, setActiveState] = useState(false);
 
     const [timeBreak, setTimeBreak] = useState(0);
+    let [totalTime, setTotalTime] = useState(0);
 
     const breakClickHandler = (breakTime) => {
         setTimeBreak(breakTime);
     }
 
     const addToListHandler = (duration) => {
-        console.log(duration);
+        const intDuration = parseInt(duration);
+        // console.log(intDuration);
+        totalTime = totalTime + intDuration;
+        setTotalTime(totalTime);
     }
     return (
         <div className='main-container'>
@@ -64,7 +68,7 @@ const MainContainer = () => {
                                     Course Time:
                                 </p>
                                 <p className='muted' id='courseTime'>
-                                    0
+                                    {parseInt(totalTime / 60)}h {totalTime % 60}m
                                 </p>
                             </div>
                             <div className='course-details-item'>

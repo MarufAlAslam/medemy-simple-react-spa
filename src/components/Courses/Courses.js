@@ -14,7 +14,7 @@ const Courses = (props) => {
                 <span className='bold'>For Age: </span> {props.course.forAge}
             </p>
             <p className='mb-1'>
-                <span className='bold'>Time Duration: </span> {props.course.timeRequired}
+                <span className='bold'>Time Duration: </span> {parseInt(props.course.timeRequired / 60)}h {props.course.timeRequired % 60}m
             </p>
             <button className='btn-add' onClick={() => { props.addToListHandler(props.course.timeRequired) }}>
                 Add To List
