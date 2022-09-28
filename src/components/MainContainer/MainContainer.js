@@ -4,6 +4,8 @@ import { faBook } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Courses from '../Courses/Courses';
 import './MainContainer.css';
+import StaticUserInfo from '../StaticUserInfo/StaticUserInfo';
+import Breaks from '../Breaks/Breaks';
 
 const MainContainer = () => {
     const [courses, setCourses] = useState([]);
@@ -12,6 +14,11 @@ const MainContainer = () => {
             .then(res => res.json())
             .then(data => setCourses(data))
     }, []);
+
+
+    const breakClickHandler = () => {
+        console.log('clicked');
+    }
     return (
         <div className='main-container'>
             <div className='course-holder'>
@@ -30,7 +37,17 @@ const MainContainer = () => {
             </div>
             <div className='profile-holder'>
                 <div className='container'>
-                    <h2>profile</h2>
+                    <StaticUserInfo></StaticUserInfo>
+                    <hr />
+                    <div className='break'>
+                        <h3 className='mb-2'>Add A Break</h3>
+                        <div className='break-btns'>
+                            <Breaks time={10} handler={breakClickHandler}></Breaks>
+                            <Breaks time={20} handler={breakClickHandler}></Breaks>
+                            <Breaks time={30} handler={breakClickHandler}></Breaks>
+                            <Breaks time={45} handler={breakClickHandler}></Breaks>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,12 @@
+.item {
+    text-align: center;
+}
+
+.user-details-card {
+    background: #A2E8D7;
+    border-radius: 20px;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+}

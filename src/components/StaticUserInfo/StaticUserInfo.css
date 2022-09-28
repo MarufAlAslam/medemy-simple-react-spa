@@ -1,0 +1,26 @@
+img {
+    max-width: 100%;
+}
+
+.user {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.user img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.muted {
+    color: #00000090;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
