@@ -15,9 +15,16 @@ const MainContainer = () => {
             .then(data => setCourses(data))
     }, []);
 
+    // const [activeState, setActiveState] = useState(false);
 
-    const breakClickHandler = () => {
-        console.log('clicked');
+    const [timeBreak, setTimeBreak] = useState(0);
+
+    const breakClickHandler = (breakTime) => {
+        setTimeBreak(breakTime);
+    }
+
+    const addToListHandler = (duration) => {
+        console.log(duration);
     }
     return (
         <div className='main-container'>
@@ -30,7 +37,7 @@ const MainContainer = () => {
                     <h3>Total {courses.length} Courses Available</h3>
                     <div className='holder'>
                         {
-                            courses.map(course => <Courses key={course.id} course={course}></Courses>)
+                            courses.map(course => <Courses key={course.id} course={course} addToListHandler={addToListHandler}></Courses>)
                         }
                     </div>
                 </div>
@@ -42,12 +49,38 @@ const MainContainer = () => {
                     <div className='break'>
                         <h3 className='mb-2'>Add A Break</h3>
                         <div className='break-btns'>
-                            <Breaks time={10} handler={breakClickHandler}></Breaks>
-                            <Breaks time={20} handler={breakClickHandler}></Breaks>
-                            <Breaks time={30} handler={breakClickHandler}></Breaks>
-                            <Breaks time={45} handler={breakClickHandler}></Breaks>
+                            <Breaks time={10} breakClickHandler={breakClickHandler}></Breaks>
+                            <Breaks time={20} breakClickHandler={breakClickHandler}></Breaks>
+                            <Breaks time={30} breakClickHandler={breakClickHandler}></Breaks>
+                            <Breaks time={45} breakClickHandler={breakClickHandler}></Breaks>
                         </div>
                     </div>
+                    <hr />
+                    <div className='course-details'>
+                        <h3 className='mb-2'>Course Details</h3>
+                        <div className='course-details-holder'>
+                            <div className='course-details-item'>
+                                <p>
+                                    Course Time:
+                                </p>
+                                <p className='muted' id='courseTime'>
+                                    0
+                                </p>
+                            </div>
+                            <div className='course-details-item'>
+                                <p>
+                                    Break Time:
+                                </p>
+                                <p className='muted' id='breakTime'>
+                                    {timeBreak}m
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button className='btn-add'>
+                        Activity Completed
+                    </button>
                 </div>
             </div>
         </div>

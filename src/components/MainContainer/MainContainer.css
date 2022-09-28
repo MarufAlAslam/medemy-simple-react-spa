@@ -44,3 +44,43 @@ hr {
 .mb-2 {
     margin-bottom: 20px;
 }
+
+.course-details-item {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 992px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+    }
+
+    .holder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .holder {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+}

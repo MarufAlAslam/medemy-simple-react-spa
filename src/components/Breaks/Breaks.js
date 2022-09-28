@@ -3,9 +3,9 @@ import './Breaks.css'
 
 const Breaks = ({ time, breakClickHandler }) => {
     return (
-        <button className='btn-break' onClick={() => { console.log("clicked") }}>
+        <button className='btn-break' onClick={() => { breakClickHandler(time) }}>
             {time}m
-        </button>
+        </button >
     );
 };
 
