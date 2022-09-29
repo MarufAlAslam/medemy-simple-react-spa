@@ -6,6 +6,8 @@ import Courses from '../Courses/Courses';
 import './MainContainer.css';
 import StaticUserInfo from '../StaticUserInfo/StaticUserInfo';
 import Breaks from '../Breaks/Breaks';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { toast, ToastContainer } from 'react-toastify';
 
 const MainContainer = () => {
     const [courses, setCourses] = useState([]);
@@ -22,14 +24,25 @@ const MainContainer = () => {
 
     const breakClickHandler = (breakTime) => {
         setTimeBreak(breakTime);
+        localStorage.setItem('breakTime', breakTime);
     }
 
     const addToListHandler = (duration) => {
         const intDuration = parseInt(duration);
         // console.log(intDuration);
-        totalTime = totalTime + intDuration;
+        if (localStorage.getItem('totalTime')) {
+            totalTime = intDuration + parseInt(localStorage.getItem('totalTime'));
+        }
+        else {
+            totalTime = totalTime + intDuration;
+        }
         setTotalTime(totalTime);
+        localStorage.setItem('totalTime', totalTime);
     }
+
+    const notify = () => {
+        toast.success("Course Completed Successfully!");
+    };
     return (
         <div className='main-container'>
             <div className='course-holder'>
@@ -68,7 +81,8 @@ const MainContainer = () => {
                                     Course Time:
                                 </p>
                                 <p className='muted' id='courseTime'>
-                                    {parseInt(totalTime / 60)}h {totalTime % 60}m
+                                    {localStorage.getItem('totalTime') ? parseInt(localStorage.getItem('totalTime') / 60) : parseInt(totalTime / 60)}h {localStorage.getItem('totalTime') ? parseInt(localStorage.getItem('totalTime') % 60) : parseInt(totalTime % 60)}m
+                                    {/* {parseInt(totalTime / 60)}h {totalTime % 60}m */}
                                 </p>
                             </div>
                             <div className='course-details-item'>
@@ -76,15 +90,18 @@ const MainContainer = () => {
                                     Break Time:
                                 </p>
                                 <p className='muted' id='breakTime'>
-                                    {timeBreak}m
+                                    {
+                                        localStorage.getItem('breakTime') ? localStorage.getItem('breakTime') : { timeBreak }
+                                    }m
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <button className='btn-add'>
+                    <button className='btn-add' onClick={notify}>
                         Activity Completed
                     </button>
+                    <ToastContainer />
                 </div>
             </div>
         </div>
