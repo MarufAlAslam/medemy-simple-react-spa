@@ -10,3 +10,18 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 1200px) {
+    .item h3 {
+        font-size: 16px;
+    }
+
+    .user-details-card {
+        background: #CCD6A6;
+        border-radius: 10px;
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

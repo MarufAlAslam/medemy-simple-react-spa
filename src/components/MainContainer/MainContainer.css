@@ -61,6 +61,20 @@ html {
     overflow-x: hidden;
 }
 
+@media screen and (max-width: 1200px) {
+    .holder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        min-height: 100vh;
+    }
+}
 
 @media screen and (max-width: 992px) {
     .main-container {
@@ -69,11 +83,28 @@ html {
         min-height: 100vh;
     }
 
-    .holder {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 50px;
+    .main-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .profile-holder {
+        width: 100%;
+    }
+
+    .user-details-card {
+        width: 50%;
+        margin: auto;
+    }
+
+    .break-btns {
+        width: 50%;
+        margin: auto;
+    }
+
+    .profile-holder h3 {
+        text-align: center;
     }
 }
 
@@ -83,5 +114,23 @@ html {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
         margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .user-details-card {
+        width: 100%;
+        margin: auto;
+    }
+
+    .break-btns {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0 15px;
     }
 }

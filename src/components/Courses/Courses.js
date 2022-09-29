@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import './Courses.css';
 
 const Courses = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className='courses'>
             <img src={props.course.img} alt="{props.course.name}" />
