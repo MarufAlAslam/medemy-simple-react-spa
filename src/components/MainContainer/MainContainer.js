@@ -17,7 +17,6 @@ const MainContainer = () => {
             .then(data => setCourses(data))
     }, []);
 
-    // const [activeState, setActiveState] = useState(false);
 
     const [timeBreak, setTimeBreak] = useState(0);
     let [totalTime, setTotalTime] = useState(0);
@@ -29,7 +28,6 @@ const MainContainer = () => {
 
     const addToListHandler = (duration) => {
         const intDuration = parseInt(duration);
-        // console.log(intDuration);
         if (localStorage.getItem('totalTime')) {
             totalTime = intDuration + parseInt(localStorage.getItem('totalTime'));
         }
@@ -43,6 +41,7 @@ const MainContainer = () => {
     const notify = () => {
         toast.success("Course Completed Successfully!");
     };
+
     return (
         <div className='main-container'>
             <div className='course-holder'>
@@ -82,7 +81,6 @@ const MainContainer = () => {
                                 </p>
                                 <p className='muted' id='courseTime'>
                                     {localStorage.getItem('totalTime') ? parseInt(localStorage.getItem('totalTime') / 60) : parseInt(totalTime / 60)}h {localStorage.getItem('totalTime') ? parseInt(localStorage.getItem('totalTime') % 60) : parseInt(totalTime % 60)}m
-                                    {/* {parseInt(totalTime / 60)}h {totalTime % 60}m */}
                                 </p>
                             </div>
                             <div className='course-details-item'>
