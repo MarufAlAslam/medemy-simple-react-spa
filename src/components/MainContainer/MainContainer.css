@@ -56,6 +56,10 @@ hr {
     align-items: center;
 }
 
+.Toastify__close-button.Toastify__close-button--light {
+    display: none;
+}
+
 body,
 html {
     overflow-x: hidden;
