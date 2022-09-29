@@ -13,10 +13,10 @@
 }
 
 .break-btns {
-    background: #A2E8D7;
-    border-radius: 20px;
+    background: #CCD6A6;
+    border-radius: 10px;
     display: flex;
-    padding: 15px;
+    padding: 15px 30px;
     justify-content: space-between;
     align-items: center;
 }
