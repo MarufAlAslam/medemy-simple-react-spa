@@ -26,7 +26,7 @@
     {
         "id": "4",
         "img": "https://marufalaslam.github.io/test/react.png",
-        "name": "React Course",
+        "name": "React.js Course",
         "details": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with rendering data to the DOM, and so creating React applications usually requires the use of additional libraries for state management and routing. Redux and React Router are respective examples of such libraries.",
         "forAge": "15+",
         "timeRequired": "480"
@@ -34,7 +34,7 @@
     {
         "id": "5",
         "img": "https://marufalaslam.github.io/test/node.png",
-        "name": "NodeJS Course",
+        "name": "Node.js Course",
         "details": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Node.js is an event-based, non-blocking, asynchronous I/O runtime that uses Google's V8 JavaScript engine and libuv library.",
         "forAge": "17+",
         "timeRequired": "450"

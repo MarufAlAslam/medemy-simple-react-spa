@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import './Courses.css';
 
 const Courses = (props) => {
@@ -19,6 +20,7 @@ const Courses = (props) => {
             <button className='btn-add' onClick={() => { props.addToListHandler(props.course.timeRequired) }}>
                 Add To List
             </button>
+            <ToastContainer />
         </div>
     );
 };

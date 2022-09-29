@@ -24,10 +24,12 @@ const MainContainer = () => {
     const breakClickHandler = (breakTime) => {
         setTimeBreak(breakTime);
         localStorage.setItem('breakTime', breakTime);
+        toast.success("Break Added Successfully!");
     }
 
     const addToListHandler = (duration) => {
         const intDuration = parseInt(duration);
+        toast.success("Item Added Successfully!");
         if (localStorage.getItem('totalTime')) {
             totalTime = intDuration + parseInt(localStorage.getItem('totalTime'));
         }
@@ -41,6 +43,7 @@ const MainContainer = () => {
     const notify = () => {
         toast.success("Course Completed Successfully!");
     };
+
 
     return (
         <div className='main-container'>
@@ -89,7 +92,7 @@ const MainContainer = () => {
                                 </p>
                                 <p className='muted' id='breakTime'>
                                     {
-                                        localStorage.getItem('breakTime') ? localStorage.getItem('breakTime') : { timeBreak }
+                                        localStorage.getItem('breakTime') ? localStorage.getItem('breakTime') : timeBreak
                                     }m
                                 </p>
                             </div>
